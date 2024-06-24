@@ -89,3 +89,18 @@ header .conteiner{
     align-items: center;
     justify-content: space-between;
 }
+.articles article img {
+    height: 100px;
+}
+#Esportes{
+    background-color: rgb(73, 84, 117);
+}
+#Economia{
+    background-color: rgb(114, 73, 73);
+}
+#Esportes .articles article a{
+    background-color: rgba(185, 11, 107, 0.699);
+}
+#Economia .articles article a{
+    background-color: rgba(46, 41, 92, 0.699);
+}
