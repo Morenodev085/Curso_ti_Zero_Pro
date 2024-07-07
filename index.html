@@ -1,187 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu portal de notícias</title>
-    <link rel="stylesheet" href="./main.css" />
+    <title>Formulário de Cadastro - Módulo 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
+<!--
+
+    CONSULTEM O README PARA DICAS DE COMO SOLUCIONAR O EXERCÍCIO!
+
+-->
+
 <body>
     <header>
-        <div class="conteiner">
-            <h1>Meu portal de notícias</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#Cinema" title="Ir para a seção de esportes">Cinema</a>
-                    </li>
-                    <li>
-                        <a href="#E-sportes" title="Ir para a seção de notícias">E-sportes</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Adquira seu veículo agora mesmo!</h1>
     </header>
-    <section id="Cinema">
-        <div class="conteiner">
-            <h2>Cinema</h2>
-            <div class="articles">
-                <article>
-                    <img src="https://s4.static.brasilescola.uol.com.br/be/2024/01/sala-de-cinema-cheia-de-pessoas-um-reflexo-da-popularizacao-do-cinema-parte-importante-de-sua-historia.jpg" alt="sala de Cinema" />
-                    <header>
-                        <time>12/06/2024 às 12:35</time>
-                    </header>
-                    <h3>Salas de cinema locais estao lotadas com estreias do mes de junho</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfYp2aCe2zhsVdEP5oiqpGyk4AW7MxCylYZQ&s" alt="Cartaz de divertidamente" />
-                    <header>
-                        <time>13/06/2024 às 12:35</time>
-                    </header>
-                    <h3>"Divertidamente 2" causa trauma em pessaos mais velhas sem controle emocional</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/04/04/278302862-ba3fe0d2d60d4562acc93380d0480651.jpg" title=" homem aranha2 " />
-                    <header>
-                        <time>23/06/2022 às 12:09</time>
-                    </header>
-                    <h3> entusiasmo com lancamento de super heroi envolve todo o brasil </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
+
+    <div id="carousel-imagens">
+        <img src="./assets/slide1.png" alt="Carro da Porsche">
+        <img src="./assets/slide2.png" alt="Carro da BMW">
+        <img src="./assets/slide3.png" alt="Carro da Ford">
+    </div>
+
+    <div class="container">
+        <h2>Insira seus dados para finalização da compra</h2>
+        <form id="form">
+            <div class="form-campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="John Doe">
             </div>
-        </div>
-    </section>
-    <section id="E-esportes">
-        <div class="conteiner">
-            <h2>E-esportes</h2>
-            <div class="articles">
-                <article>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6FxaKa-HOJs83Kbvjc2gM2L6lTtvs-FGHiQ&s" alt="CBLOL plateia" />
-                    <header>
-                        <time class="datadanoticia"> 15/08/2024 às 11:55</time>
-                    </header>
-                    <h3>CBLOL movimenta mais dinheiro que a serie B do brasileirao</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="https://s2-ge.glbimg.com/TAwRlZ3Xb4YsLsiezF_14_muMHg=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/7/p/bLs50GQ52mVxeW5BtuVA/cblol-2022-logos-equipes-etapa-1-divulgacao-riot-games.jpg" alt="Calendarios de jogos" />
-                    <header>
-                        <time>12/06/2024 às 12:35</time>
-                    </header>
-                    <h3>Tabela de jogos para o primneiro split</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="https://pbs.twimg.com/media/GQOLkF3X0AAbOXG.jpg" alt="Tabela cblol" />
-                    <header>
-                        <time>13/07/2022 às 12:35</time>
-                    </header>
-                    <h3>"Faz o F" diz fã apois ver a tabela do CBLOL</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
+            <div class="form-campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com">
             </div>
-        </div>
-    </section>
-    <section id="Esportes">
-        <div class="conteiner">
-            <h2>Esportes</h2>
-            <div class="articles">
-                <article>
-                    <img src="./imagens/futebol.jpg" alt="imagem de bola de futebol" />
-                    <header>
-                        <time>13/07/2022 às 12:35</time>
-                    </header>
-                    <h3>Grande clássico na noite de hoje</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="./imagens/futebol-americano.jpg" alt="Jogador de futebol futebol-americano" />
-                    <header>
-                        <time>13/07/2022 às 12:35</time>
-                    </header>
-                    <h3>Noite de Superbowl</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="./imagens/basquete.jpg" title=" estadio de basquete " />
-                    <header>
-                        <time>13/07/2022 às 12:35</time>
-                    </header>
-                    <h3> Notícia sobre a NBA</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
+            <div class="form-campo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone">
             </div>
-        </div>
-    </section>
-    <section id="Economia">
-        <div class="conteiner">
-            <h2>Economia</h2>
-            <div class="articles">
-                <article>
-                    <img src="./imagens/dolares.jpg" alt="Muitos dolares" />
-                    <header>
-                        <time class="datadanoticia"> 15/08/2024 às 11:55</time>
-                    </header>
-                    <h3>Dolar em alta de 0.50%</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="./imagens/euro.jpg" alt="Muitos euros" />
-                    <header>
-                        <time>12/06/2024 às 12:35</time>
-                    </header>
-                    <h3>Euro em queda de 0.40%</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
-                <article>
-                    <img src="./imagens/petroleo.jpg" alt="Bomba de petroleo" />
-                    <header>
-                        <time>13/07/2022 às 12:35</time>
-                    </header>
-                    <h3>"Alta no preço do barril do petroleo</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam tenetur error? Laborum, modi itaque. Sunt.
-                    </p>
-                    <a href="#" title="Leia a notícia completa">Ler mais</a>
-                </article>
+            <div class="form-campo">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf">
             </div>
-        </div>
-    </section>
+            <div class="form-campo">
+                <label for="endereco">Endereço completo</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade, estado">
+            </div>
+            <div class="form-campo">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#carousel-imagens').slick({
+                autoplay: true,
+                arrows: false
+            })
+        })
+    </script>
 </body>
-</html>
