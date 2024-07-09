@@ -13,23 +13,23 @@ $('#cep').mask('00000-000', {
 $('form').validate({
     rules: {
         nome: {
-            requized: true
+            required: true
         },
         email: {
-            requized: true,
+            required: true,
             email: true
         },
         telefone: {
-            requized: true
+            required: true
         },
         endereco: {
-            requized: true
+            required: true
         },
         cep: {
-            requized: true
+            required: true
         },
         cpf: {
-            requized: true
+            required: true
         },
     },
     submitHandler: function (form) {
