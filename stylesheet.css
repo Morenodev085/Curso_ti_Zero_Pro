@@ -121,16 +121,19 @@ footer{
 
 @media screen and ( max-width: 767px ) {
     .sobre-loja-content {
-        display: block;
-        align-items: normal;
-        justify-content: space-around;
-        flex-wrap: wrap;      
+        display: flex;
+        justify-content: center; /* Ajusta o alinhamento horizontal */
+        align-items: center; /* Ajusta o alinhamento vertical */
+        width: 100%;
+        height: 100%;
+        padding: 20px;
     }
     .sobre-loja-content p {
-        text-align: justify;
-        font-size: 1em;
-        margin-right: 0;
-    }
+    width: 100%;
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 0;
+}
     .sobre-loja-image {
         max-width: 90%;
         height: auto;
