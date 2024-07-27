@@ -1,0 +1,151 @@
+// src/styles/main.less
+
+// 1. Variáveis e Mixins
+@import "variables.less";
+@import "mixins.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+// 2. Reset e Configurações Globais
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: @corDeFundo;
+    color: @textColor;
+}
+
+// 3. Cabeçalho
+header {
+    background-color: @headerBackground;
+    padding: 20px;
+    border-bottom: 1px solid @headerBorderColor;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .branding img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav {
+        ul.menu {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 15px;
+
+                a {
+                    text-decoration: none;
+                    color: @linkColor;
+                    font-weight: bold;
+                    &:hover {
+                        color: @linkHoverColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 4. Seção de Produtos
+section {
+    padding: 40px 20px;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: @headingColor;
+    }
+
+    ul.products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        list-style: none;
+
+        .product-item {
+            background-color: @productBackground;
+            border: 1px solid @productBorder;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            max-width: 200px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+            h4 {
+                margin: 10px 0;
+                font-size: 18px;
+                color: @productTitleColor;
+            }
+
+            p {
+                font-size: 14px;
+                color: @productTextColor;
+                margin-bottom: 15px;
+            }
+
+            .product-button {
+                display: inline-block;
+                background-color: @buttonBackground;
+                color: @buttonTextColor;
+                padding: 10px 20px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: @buttonHoverBackground;
+                }
+            }
+        }
+    }
+}
+
+// 5. Responsividade
+@media @breakpointTablet {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        max-width: 100%;
+    }
+}
+
+@media @breakpointMobile {
+    section {
+        padding: 20px 10px;
+    }
+}

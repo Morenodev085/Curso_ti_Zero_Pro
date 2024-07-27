@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .branding img {
+  max-width: 100%;
+  height: auto;
+}
+header nav ul.menu {
+  display: flex;
+  list-style: none;
+}
+header nav ul.menu li {
+  margin: 0 15px;
+}
+header nav ul.menu li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+header nav ul.menu li a:hover {
+  color: #0056b3;
+}
+section {
+  padding: 40px 20px;
+}
+section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #222;
+}
+section ul.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+section ul.products .product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section ul.products .product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+section ul.products .product-item h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+section ul.products .product-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+section ul.products .product-item .product-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+section ul.products .product-item .product-button:hover {
+  background-color: #0056b3;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .container {
+    flex-direction: column;
+  }
+  nav ul.menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  section {
+    padding: 20px 10px;
+  }
+}
