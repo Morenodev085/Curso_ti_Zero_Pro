@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Teste para inclusao de novos contatos", () => {
+describe("Teste para inclusão de novos contatos", () => {
     beforeEach(() => {
         cy.visit("https://agenda-contatos-react.vercel.app")
     })
@@ -13,29 +13,25 @@ describe("Teste para inclusao de novos contatos", () => {
         cy.contains('Moreno Almeida').should('exist')
     })
 
-    it("deve altera o contato", () => {
-        cy.contains('Moreno Almeida').parent().find('button').contains('editar').click()
-        cy.get('[type="text"]').type('Moreno Silva')
-        cy.get('[type="email"]').type('moreno.silva@exemplo.com')
-        cy.get('[type="tel"]').type('992992929')
-        cy.get('button').contains('Adicionar').click()
-    })
-    it("deve deletar o contato", () => {
-        // Inclui o contato antes de tentar removê-lo
-        cy.contains('Moreno Almeida').parent().find('button').contains('editar').click()
+    it("deve alterar o contato", () => {
+        // Selecionando o botão de editar de forma mais específica
+        cy.get('.sc-iAEyYk > :nth-child(5)').find('button').contains('Editar').click();
+        cy.get('[type="text"]').clear().type('Moreno Silva')
+        cy.get('[type="email"]').clear().type('moreno.silva@exemplo.com')
+        cy.get('[type="tel"]').clear().type('992992929')
 
-        cy.get('[type="text"]').type('Moreno Silva')
-        cy.get('[type="email"]').type('moreno.silva@exemplo.com')
-        cy.get('[type="tel"]').type('992992929')
-        
-        // Verifica se o contato foi adicionado antes de tentar deletá-lo
-        cy.get('button').contains('salvar').click()
+        // Clicando no botão 'Salvar'
+        cy.get('button').contains('Salvar').click()
+
+        // Verificando se o nome foi atualizado
         cy.contains('Moreno Silva').should('exist')
-    
-        // Tenta remover o contato
-        cy.contains('Moreno Silva').parent().find('button').contains('Remover').click()
-    
-        // Verifica se o contato foi removido
+    })
+
+    it("deve deletar o contato", () => {
+        // removendo contato
+        cy.get(':nth-child(5) > .sc-gueYoa > .delete').click()
+
+        // Verificando se o contato foi removido
         cy.contains('Moreno Silva').should('not.exist')
     })
 })
